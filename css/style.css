@@ -1,0 +1,503 @@
+@charset "UTF-8";
+/*Импорт в основной фаил*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/*Шрифты будут в разных местах, сохраним в миксин*/
+h1 {
+  color: green; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  /*копируем со шрифтов*/
+  font-size: 15px;
+  /*стандартный шрифт для всего текста на сайте*/
+  line-height: 24px; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  /*от родителя наследует, если он черный*/ }
+
+.header {
+  background-image: url(../images/header-bg.jpg);
+  min-height: 793px;
+  /*если увеличится content то не вылезет*/
+  background-repeat: no-repeat;
+  /*не повторяется картинка на большом мониторе*/
+  background-size: cover;
+  background-position: top center;
+  /*картинка вверху и по центру*/ }
+
+/* меряем расстояние */
+.container {
+  max-width: 1200px;
+  /*1200*/
+  /* если открываю сайт на моб. телефоне,
+        то 1170 не влезет в экран, появится нижний scroll !!! , поэтому пишем max-width:
+        если у меня есть монитор 1170, то width будет 1170, а если монитор меньше чем 1170,
+        то ширина будет как монитор;  */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  /*при сжатии container логотим и меню не прижимаются вплотную к экрану, а имеют отступ*/
+  padding-right: 15px;
+  /* pddings идут внутри*/
+  /* расстояние когда буду кнопки засовывать не будет 1170-15-15, а будет 1140, поэтому пишем 1200
+        интересная вещь, расстояние между логотипом и между всеми крайними элементами будет 1170*/ }
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center; }
+
+.menu__list {
+  display: flex;
+  list-style: none; }
+
+.menu__list li + li {
+  padding-left: 50px; }
+
+.login {
+  margin-right: 44px;
+  /* Внимание отступ внешний, если padding внутренний, то при наведении курсор захватывает дополеительную область.*/
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.menu__list a {
+  opacity: 0.5;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .5s; }
+
+.menu__list a:hover {
+  opacity: 1; }
+
+.sign-up {
+  text-transform: uppercase;
+  color: #250F8A;
+  font-weight: 600;
+  background-color: #ffffff;
+  padding: 8px 43px;
+  border-radius: 20px; }
+
+.header-slider {
+  padding-top: 111px; }
+
+.header-slider__item-content {
+  display: flex;
+  justify-content: space-between; }
+
+.header-slider__item-info {
+  max-width: 506px;
+  color: #ffffff;
+  /* задали элементу родителю, написали один раз а не два */ }
+
+.header-slider__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 60px;
+  margin-bottom: 10px; }
+
+.header-slider__description {
+  line-height: 55px;
+  font-size: 24px;
+  margin-bottom: 40px; }
+
+.header-slider__btn {
+  text-transform: uppercase;
+  color: #250F8A;
+  font-weight: 600;
+  padding: 13px 39px;
+  background-color: #FFCA00;
+  border-radius: 25px; }
+
+.header-slider__item-images {
+  margin: 10px 82px 0 0; }
+
+.header-dots {
+  list-style: none;
+  position: absolute;
+  /* кнопки перемещаем в сторону*/
+  right: 0;
+  top: 50%; }
+
+/* кнопки слайдера*/
+.header-dots button {
+  border: none;
+  background-color: #fff;
+  opacity: 0.5;
+  font-size: 0;
+  /* убираем цифры в кнопках */
+  padding: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 3.5px;
+  cursor: pointer;
+  outline: none;
+  /*убрали обводку у кнопки*/
+  margin: 10px auto;
+  /* точки кнопок по центру */
+  display: block;
+  /* точки кнопок по центру, чтобы сделать элементы блочными*/ }
+
+.header-dots .slick-active button {
+  /* стиль активной точки*/
+  width: 15px;
+  opacity: 1; }
+
+.specialised__title {
+  margin-bottom: 96px;
+  /* нижний отступ до блока*/ }
+
+.specialised {
+  padding: 55px 0 93px 0;
+  background-image: url(../images/special-4.svg);
+  background-position: left bottom;
+  /* чтоб разместился в левом нижнем углу*/
+  background-repeat: no-repeat;
+  /* чтоб не размножился*/
+  color: #202020;
+  text-align: center;
+  /* все элементы по центру*/ }
+
+.title {
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 700;
+  text-align: center;
+  /* все элементы по центру*/ }
+
+.specialised__items {
+  display: flex;
+  justify-content: space-between;
+  max-width: 980px;
+  /* ширина блока (280*3) + отступы 70+70 = 980px */
+  margin: 0 auto;
+  /* центрируем блоки с фиксированной шириной */ }
+
+.specialised__item {
+  width: 280px;
+  /* ограничиваем блок согласно размера 280, отступы теперь между блоками 70, текст выровнялся */ }
+
+.specialised__item-img {
+  margin-bottom: 23px;
+  min-height: 235px; }
+
+.specialised__item-title {
+  margin-bottom: 11px;
+  font-size: 20px;
+  font-weight: 700; }
+
+.specialised__item-text {
+  padding: 0 10px;
+  color: #272727;
+  opacity: 0.7; }

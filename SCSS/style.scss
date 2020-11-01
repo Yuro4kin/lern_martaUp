@@ -1,0 +1,260 @@
+   /*Импорт в основной фаил*/
+    @import 'normalize.scss';
+                                                              /*Шрифты будут в разных местах, сохраним в миксин*/
+    // === Mixins ===
+    @mixin font-lato {
+      font-family: 'Lato', sans-serif;
+    }
+    @mixin  font-montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+    // === / Mixins === //
+
+    //=== Variables==//
+    $color-white:#ffffff;
+    //=== Variables==//
+
+    $color-main: rgb(206, 41, 156);
+    $color-secondary: green;
+    
+       
+    h1 {
+      color: $color-secondary;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+
+    //=== Common ===//
+    body {
+      font-family: 'Source Sans Pro', sans-serif; /*копируем со шрифтов*/
+      font-size: 15px; /*стандартный шрифт для всего текста на сайте*/
+      line-height: 24px;
+      
+    }
+
+
+   
+      
+     a {
+      text-decoration: none;
+      color: inherit; /*от родителя наследует, если он черный*/
+    }
+   //=== Common ===//
+
+
+
+    //=== Header ===//
+     .header {
+       background-image: url(../images/header-bg.jpg);
+       min-height: 793px;  /*если увеличится content то не вылезет*/
+       background-repeat: no-repeat; /*не повторяется картинка на большом мониторе*/
+       background-size: cover;
+       background-position: top center; /*картинка вверху и по центру*/
+     }
+
+     /* меряем расстояние */
+     .container {
+       max-width: 1200px; /*1200*/  
+       /* если открываю сайт на моб. телефоне,
+        то 1170 не влезет в экран, появится нижний scroll !!! , поэтому пишем max-width:
+        если у меня есть монитор 1170, то width будет 1170, а если монитор меньше чем 1170,
+        то ширина будет как монитор;  */
+        margin-left: auto;
+        margin-right: auto;
+     // background-color: yellow;  проверка container 
+        padding-left: 15px; /*при сжатии container логотим и меню не прижимаются вплотную к экрану, а имеют отступ*/
+        padding-right: 15px;  /* pddings идут внутри*/
+        /* расстояние когда буду кнопки засовывать не будет 1170-15-15, а будет 1140, поэтому пишем 1200
+        интересная вещь, расстояние между логотипом и между всеми крайними элементами будет 1170*/
+     }
+
+     .header__top {
+       display: flex;
+       justify-content: space-between;
+       height: 100px;
+       align-items: center;
+      
+     }
+
+     .menu__list {
+       display: flex;
+       list-style: none;
+     }
+
+    
+
+     .menu__list li + li {
+      padding-left: 50px;
+      
+    }
+
+    .login {
+      margin-right: 44px;                 /* Внимание отступ внешний, если padding внутренний, то при наведении курсор захватывает дополеительную область.*/
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
+
+    }
+    .menu__list a {
+      opacity: 0.5;
+      color: #ffffff;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all .5s;
+    }
+
+   .menu__list a:hover {
+      opacity: 1;
+    }
+
+   .sign-up {
+     text-transform: uppercase;
+     color: #250F8A;
+     font-weight: 600;
+     background-color: #ffffff;
+     padding: 8px 43px;
+     border-radius: 20px;
+   }
+
+                                      //===  slider ===//
+
+   .header-slider {
+     padding-top: 111px;
+   }
+
+   .header-slider__item-content {
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .header-slider__item-info {
+     max-width: 506px;
+     color: #ffffff;                              /* задали элементу родителю, написали один раз а не два */
+   }
+
+   .header-slider__title {
+     font-weight: 700;
+     font-size: 45px;
+     line-height: 60px;
+     margin-bottom: 10px;
+   }
+
+   .header-slider__description {
+     line-height: 55px;
+     font-size: 24px;
+     margin-bottom: 40px;
+   }
+
+   .header-slider__btn {
+     text-transform: uppercase;
+     color: #250F8A;
+     font-weight: 600;
+     padding: 13px 39px;
+     background-color: #FFCA00;
+     border-radius: 25px;
+   }
+
+   .header-slider__item-images {
+     margin: 10px 82px 0 0;
+   }
+
+   .header-dots {
+     list-style: none;
+     position: absolute;                       /* кнопки перемещаем в сторону*/
+     right: 0;
+     top: 50%;
+   }
+                                               /* кнопки слайдера*/
+   .header-dots button {
+     border: none;
+     background-color: #fff;
+     opacity: 0.5;
+     font-size: 0;                             /* убираем цифры в кнопках */
+     padding: 0;
+     width: 7px;
+     height: 7px;
+     border-radius: 3.5px;
+     cursor: pointer;
+     outline: none;                          /*убрали обводку у кнопки*/
+     margin: 10px auto;                         /* точки кнопок по центру */
+     display: block;                            /* точки кнопок по центру, чтобы сделать элементы блочными*/
+
+   }
+
+   .header-dots .slick-active button {           /* стиль активной точки*/
+     width: 15px;
+     opacity: 1;
+   }
+                                     //=== / slider ===//
+                                    //=== / header ===//
+
+    //=== specialised ===//
+
+   .specialised__title {
+     margin-bottom: 96px;                                 /* нижний отступ до блока*/
+
+   }
+
+   .specialised {
+     padding: 55px 0 93px 0;
+     background-image: url(../images/special-4.svg);
+     background-position: left bottom;                   /* чтоб разместился в левом нижнем углу*/
+     background-repeat: no-repeat;                       /* чтоб не размножился*/
+     color: #202020;
+     text-align: center;                                 /* все элементы по центру*/
+   }
+
+   .title {
+     font-size: 35px;
+     line-height: 45px;
+     font-weight: 700;
+     text-align: center;                                /* все элементы по центру*/
+   }
+
+   .specialised__items {
+     display: flex;
+     justify-content: space-between;
+     max-width: 980px;                                  /* ширина блока (280*3) + отступы 70+70 = 980px */
+     margin: 0 auto;                                    /* центрируем блоки с фиксированной шириной */
+   }
+
+   .specialised__item {
+     width: 280px;                                       /* ограничиваем блок согласно размера 280, отступы теперь между блоками 70, текст выровнялся */
+   }
+
+   .specialised__item-img {
+     margin-bottom: 23px;
+     min-height: 235px;
+   }
+
+   .specialised__item-title {
+     margin-bottom: 11px;
+     font-size: 20px;
+     font-weight: 700;
+   }
+
+   .specialised__item-text {
+     padding: 0 10px;
+     color: #272727;
+     opacity: 0.7;
+   }
+
+    //=== / specialised ===//
+
+    //=== founder ===//
+
+    //=== / founder ===//
+
+    //===  plans ===//
+
+   //=== / plans ===//
+
+   //===  free ===//
+
+   //=== / free ===//
+
+  //===  footer ===//
+
+   //=== / footer ===//
